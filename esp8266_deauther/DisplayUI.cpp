@@ -312,7 +312,7 @@ void DisplayUI::setup() {
         addMenuNode(&stationMenu, [this]() {
             return str(D_AP) + stations.getAPStr(selectedID); // AP: someAP
         }, [this]() {
-            int apID = accesspoints.find(stations.getAP(selectedID));
+            int apID = stations.getAP(selectedID);
 
             if (apID >= 0) {
                 selectedID = apID;
